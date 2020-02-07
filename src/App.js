@@ -1,4 +1,4 @@
-import React , {useState ,useEffect, Fragment} from 'react';
+import React , {useState ,useEffect} from 'react';
 import './App.css';
 import Repository from './components/repository';
 import axios from 'axios' ;
@@ -35,26 +35,16 @@ function App() {
   }
 
   return (
-    <Fragment>
-      
+    <div className = "container">
       <div className="row justify-content-center">
-        {/* <div className="col-md-8 ">
-          <h1 className="label label-primary">{repositories.length}</h1>
-        </div>
-        <div className="col-md-8 ">
-          <h1 className="label label-primary">{records}</h1>
-        </div> */}
-        <div className="col-md-10">
+        <div className="col-md-10 gi">
           <Repository repositories={repositories} />
-        </div>
-        <div className="col-md-8 ">
           <div className="d-flex flex-row py-4 justify-content-center">
-            {records && <Pagination totalRecords={records} pageLimit={30} pageNeighbours={3} onPageChanged={onPageChanged} />}
+            {records && <Pagination totalRecords={records} pageLimit={30} pageNeighbours={1} onPageChanged={onPageChanged} />}
           </div>
         </div>
       </div>
-      
-    </Fragment>
+    </div>
   );
 }
 
