@@ -5,10 +5,10 @@ $light-background: lighten(desaturate($base-color, 50%), 12.5%);
 
 /* Define Styles */
 
-.current-page {
-  font-size: 1.5rem;
-  vertical-align: middle;
-}
+// .current-page {
+//   font-size: 1.5rem;
+//   vertical-align: middle;
+// } 
 
 .country-card-container {
   height: 60px;
@@ -60,5 +60,16 @@ ul.pagination {
     &:hover {
       background-color: $light-background;
     }
+  }
+}
+
+
+/* Repository Cards styling */
+
+.info-row{
+  background-color: #EEEEEE;
+  .stars , .issues {
+    background-color: #BBBBBB;
+    color: white;
   }
 }

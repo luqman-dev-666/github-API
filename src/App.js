@@ -18,18 +18,18 @@ function App() {
   date.setDate( date.getDate() -  30);
   date = formatDate(date);
 
-  console.log(date);
-
   useEffect(() => {
-    const url = `https://api.github.com/search/repositories?q=created:>${date}&sort=stars&order=desc&page=${currentPage}`;
+    const url = `https://api.github.com/search/repositories?q=created:>${date}&sort=stars&order=desc&page=${currentPage}&client_id=0940d5637c1f1c597752&client_secret=915c97a2b569d578433e381e058d86b84a8de671`;
     axios.get(url).then(res=>{
     setRepositories(res.data.items);
-    setRecords(res.data.total_count);
-  })
+    setRecords(res.data.total_count)
+  }).catch(res  => {
+    alert("Only the first 1000 search results are available")
+  });
   } ,[currentPage])
 
   const onPageChanged = data => {
-    const { currentPage, totalPages, pageLimit } = data;
+    const { currentPage, totalPages} = data;
     setCurrentPage(currentPage) ;
     setTotalPages(totalPages);
   }
@@ -38,17 +38,19 @@ function App() {
     <Fragment>
       
       <div className="row justify-content-center">
-        <div className="col-md-8 ">
+        {/* <div className="col-md-8 ">
           <h1 className="label label-primary">{repositories.length}</h1>
         </div>
         <div className="col-md-8 ">
           <h1 className="label label-primary">{records}</h1>
-        </div>
-        <div className="col-md-8">
+        </div> */}
+        <div className="col-md-10">
           <Repository repositories={repositories} />
         </div>
         <div className="col-md-8 ">
-          {records && <Pagination totalRecords={records} pageLimit={30} pageNeighbours={1} onPageChanged={onPageChanged} />}
+          <div className="d-flex flex-row py-4 justify-content-center">
+            {records && <Pagination totalRecords={records} pageLimit={30} pageNeighbours={3} onPageChanged={onPageChanged} />}
+          </div>
         </div>
       </div>
       

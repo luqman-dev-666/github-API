@@ -1,10 +1,5 @@
 /* Declare some variables */
 /* Define Styles */
-.current-page {
-  font-size: 1.5rem;
-  vertical-align: middle;
-}
-
 .country-card-container {
   height: 60px;
   cursor: pointer;
@@ -54,5 +49,15 @@ ul.pagination a.page-link {
 
 ul.pagination a.page-link:hover {
   background-color: #f4f4f4;
+}
+
+/* Repository Cards styling */
+.info-row {
+  background-color: #EEEEEE;
+}
+
+.info-row .stars, .info-row .issues {
+  background-color: #BBBBBB;
+  color: white;
 }
 /*# sourceMappingURL=App.css.map */
