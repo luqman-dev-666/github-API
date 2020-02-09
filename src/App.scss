@@ -5,32 +5,6 @@ $light-background: lighten(desaturate($base-color, 50%), 12.5%);
 
 /* Define Styles */
 
-// .current-page {
-//   font-size: 1.5rem;
-//   vertical-align: middle;
-// } 
-
-// .country-card-container {
-//   height: 60px;
-//   cursor: pointer;
-//   position: relative;
-//   overflow: hidden;
-// }
-
-// .country-name {
-//   font-size: 0.9rem;
-// }
-
-// .country-region {
-//   font-size: 0.7rem;
-// }
-
-// .current-page,
-// .country-name,
-// .country-region {
-//   line-height: 1;
-// }
-
 body{
   margin: 0;
   padding: 0;
@@ -68,17 +42,6 @@ ul.pagination {
   }
 }
 
-/* image */
-.avatar {
-  height:100%;
-  .image {
-    display:"block" !important;
-    width:"100px" !important;
-    height:"100px" !important;
-    margin:"auto" !important
-  }
-}
-
 /* Repository Cards styling */
 
 .info-row{
@@ -89,10 +52,20 @@ ul.pagination {
   }
 }
 
-.repositories a{
-  color: black;
-  text-decoration: none;
-  &:hover {
+.repositories{
+  a {
     color: black;
+    text-decoration: none;
+    &:hover {
+      color: black;
+    }
   }
+
+  .image {
+    display: block;
+    width: 100px ;
+    height: 100px;
+    margin: auto
+  }
+  
 }

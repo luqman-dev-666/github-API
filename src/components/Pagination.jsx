@@ -16,7 +16,6 @@ const range = (from, to, step = 1) => {
     range.push(i);
     i += step;
   }
-
   return range;
 }
 
