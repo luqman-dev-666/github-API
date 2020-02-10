@@ -1,1 +1,3 @@
-![](API.gif)
+<p align="center">
+  ![](API.gif)
+</p>
