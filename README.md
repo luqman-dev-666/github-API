@@ -2,7 +2,7 @@
 A small webapp lists the most starred Github repos that were created in the last 30 days. 
 
 <p align="center">
-    <a href="https://featured-github-app.herokuapp.com/">
+    <a href="https://featured-repositories.herokuapp.com/">
         <img src="API.gif" width="500" height="500" />
     </a>
 </p>
@@ -15,7 +15,8 @@ A small webapp lists the most starred Github repos that were created in the last
     npm start
 
 ## Usage 
-	This app was made using github api which allows only the first 1000 results
+you can check the webapp <a href="https://featured-repositories.herokuapp.com/">here</a>
+This app was made using github api which allows only the first 1000 results
 
 
 
