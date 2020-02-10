@@ -37,7 +37,7 @@ function App() {
   return (
     <div className = "container">
       <div className="row justify-content-center">
-        <div className="col-md-10 gi">
+        <div className="col-md-10">
           <Repository repositories={repositories} />
           <div className="d-flex flex-row py-4 justify-content-center">
             {records && <Pagination totalRecords={records} pageLimit={30} pageNeighbours={1} onPageChanged={onPageChanged} />}
