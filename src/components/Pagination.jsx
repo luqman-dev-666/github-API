@@ -16,7 +16,6 @@ const range = (from, to, step = 1) => {
     range.push(i);
     i += step;
   }
-
   return range;
 }
 
@@ -151,7 +150,7 @@ class Pagination extends Component {
 
     return (
       <Fragment>
-        <nav aria-label="Countries Pagination">
+        <nav aria-label="Pagination">
           <ul className="pagination">
             { pages.map((page, index) => {
 

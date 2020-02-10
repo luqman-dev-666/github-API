@@ -1,18 +1,16 @@
 import React , {useState ,useEffect} from 'react';
+import axios from 'axios' ;
 import './App.css';
 import Repository from './components/repository';
-import axios from 'axios' ;
 import Pagination from './components/Pagination';
-
-// import $ from "jquery";
 
 function App() {
   
   const [repositories,setRepositories] = useState([]);
   const [currentPage , setCurrentPage] = useState(1);
-  const [totalPages , setTotalPages] = useState(null) ;
-  // const [totalRecords , setTotalRecords] = useState(null) ;
   const [records , setRecords] = useState(null) ;
+
+  /*Calculate the creation date (last 30 days)*/
 
   let date = new Date();
   date.setDate( date.getDate() -  30);
@@ -29,18 +27,18 @@ function App() {
   } ,[currentPage])
 
   const onPageChanged = data => {
-    const { currentPage, totalPages} = data;
+    const { currentPage} = data;
     setCurrentPage(currentPage) ;
-    setTotalPages(totalPages);
   }
 
   return (
+    
     <div className = "container">
       <div className="row justify-content-center">
-        <div className="col-md-10">
+        <div className="col-md-9">
           <Repository repositories={repositories} />
           <div className="d-flex flex-row py-4 justify-content-center">
-            {records && <Pagination totalRecords={records} pageLimit={30} pageNeighbours={1} onPageChanged={onPageChanged} />}
+            {records && <Pagination totalRecords={records} pageNeighbours={1} onPageChanged={onPageChanged} />}
           </div>
         </div>
       </div>
@@ -50,6 +48,7 @@ function App() {
 
 export default App;
 
+/* Helper function to change the date format to YYYY-MM-DD */
 
 function formatDate(date) {
   var d = new Date(date),

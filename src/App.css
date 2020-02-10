@@ -37,18 +37,6 @@ ul.pagination a.page-link:hover {
   background-color: #f4f4f4;
 }
 
-/* image */
-.avatar {
-  height: 100%;
-}
-
-.avatar .image {
-  display: "block" !important;
-  width: "100px" !important;
-  height: "100px" !important;
-  margin: "auto" !important;
-}
-
 /* Repository Cards styling */
 .info-row {
   background-color: #EEEEEE;
@@ -61,10 +49,17 @@ ul.pagination a.page-link:hover {
 
 .repositories a {
   color: black;
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 .repositories a:hover {
   color: black;
+}
+
+.repositories .image {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: auto;
 }
 /*# sourceMappingURL=App.css.map */
