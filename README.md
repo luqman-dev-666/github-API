@@ -15,8 +15,8 @@ A small webapp that lists the most starred Github repos that were created in the
     npm start
 
 ## Usage 
-you can check the webapp <a href="https://featured-repositories.herokuapp.com/" target="_blank">here</a>
-    This app was made using github api which allows only the first 1000 results
+you can check the webapp <a href="https://featured-repositories.herokuapp.com/" target="_blank">here</a>.<br />
+This app was made using github api which allows only the first 1000 results.
 
 
 
