@@ -2,7 +2,9 @@
 A small webapp lists the most starred Github repos that were created in the last 30 days. 
 
 <p align="center">
-    <img src="API.gif" width="500" height="500" />
+    <a href="https://featured-github-app.herokuapp.com/">
+        <img src="API.gif" width="500" height="500" />
+    </a>
 </p>
 
 
